@@ -5,7 +5,7 @@ import Collection from "../Collection/Collection";
 function Home() {
   return (
     <div>
-      <Link to="about">Go To About Page</Link>
+      {/*<Link to="about">Go To About Page</Link>*/}
       <Collection collectionIdeea="bjksdbfviwebvjb"></Collection>
     </div>
   );
