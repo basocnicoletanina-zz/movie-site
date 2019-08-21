@@ -12,7 +12,10 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header></Header>
+        <Header
+          imageSource="https://image.flaticon.com/icons/png/128/69/69480.png"
+          anotherProps="Ma"
+          menu={["Popular ", "New", "Search"]}></Header>
         <div className="app-content">
           <Route exact path="/" component={Home}></Route>
           <Route path="/about" exact component={About}></Route>

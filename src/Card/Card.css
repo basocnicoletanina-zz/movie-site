@@ -1,0 +1,8 @@
+.card {
+  color: white;
+  border: 4px dotted black;
+  padding: 200px;
+  display: flex;
+  justify-content: center;
+  background-color: #555555;
+}
