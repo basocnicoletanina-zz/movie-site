@@ -1,9 +1,9 @@
 .header {
-  background-image: URL("http://wader.github.io/slippy/resources/svg/background.svg"); /*height:100px;*/
-  background-color: #555555;
+  background-color: #051422;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: white;
 }
 .header-logo {
   text-indent: 20%;
@@ -14,4 +14,16 @@
   padding: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
+}
+.logo {
+  width: 100px;
+}
+.header-menu {
+  position: relative;
+}
+.lists-item::after {
+  content: "|";
+}
+.lists-item:last-child::after {
+  content: "";
 }

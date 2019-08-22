@@ -1,13 +1,15 @@
 .app {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
-  background-color: #333;
+  min-height: 100vh;
+  background-color: rgb(35, 43, 65);
+  background-image: url("/hexagons.svg");
 }
 
 .app-content {
   flex: 1 1 auto;
-  display: flex;
+  width: 1400px;
+  margin: 0 auto;
 }
 
 .app a {

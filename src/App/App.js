@@ -13,9 +13,9 @@ function App() {
     <Router>
       <div className="app">
         <Header
-          imageSource="https://image.flaticon.com/icons/png/128/69/69480.png"
+          imageSource="https://www.logospng.com/images/117/console-playlist-genre-intro-videos-playlists-amp-playlist-117795.png"
           anotherProps="Ma"
-          menu={["Popular ", "New", "Search"]}></Header>
+          menu={["Popular ", "New ", "Search"]}></Header>
         <div className="app-content">
           <Route exact path="/" component={Home}></Route>
           <Route path="/about" exact component={About}></Route>
