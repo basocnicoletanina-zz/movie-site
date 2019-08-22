@@ -82,6 +82,8 @@
 }
 .genre-item::after {
   content: "|";
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .genre-item:last-child::after {
   content: "";
