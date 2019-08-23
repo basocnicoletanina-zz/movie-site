@@ -7,6 +7,8 @@ import Footer from "../Footer/Footer";
 
 import Home from "../Home/Home";
 import About from "../About/About";
+import Popular from "../Popular/Popular";
+import New from "../New/New";
 
 function App() {
   return (
@@ -15,10 +17,16 @@ function App() {
         <Header
           imageSource="https://www.logospng.com/images/117/console-playlist-genre-intro-videos-playlists-amp-playlist-117795.png"
           anotherProps="Ma"
-          menu={["Popular ", "New ", "Search"]}></Header>
+          menu={[
+            { link: "/popular", title: "Popular" },
+            { link: "/new", title: "New" },
+            { link: "/search", title: "Search" },
+          ]}></Header>
         <div className="app-content">
           <Route exact path="/" component={Home}></Route>
           <Route path="/about" exact component={About}></Route>
+          <Route exact path="/new" component={New}></Route>
+          <Route path="/popular" exact component={Popular}></Route>
         </div>
         <Footer></Footer>
       </div>

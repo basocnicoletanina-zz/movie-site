@@ -4,6 +4,7 @@
   background-color: rgb(42, 80, 95);
   display: flex;
   min-width: 0;
+  justify-content: space-between;
 }
 
 .card:hover {
@@ -38,14 +39,6 @@
   justify-content: center;
   font-size: 150%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.title-home {
-  font-size: 40px;
-  text-align: center;
-  color: white;
-  padding: 30px;
-  text-shadow: 2px 2px 4px #000000;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .button {

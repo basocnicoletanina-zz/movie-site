@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { API_KEY } from "../Constants.js";
+import { Link } from "react-router-dom";
 
 function Header(props) {
   return (
@@ -11,8 +12,8 @@ function Header(props) {
 
       <ul className="header-menu">
         {props.menu.map(item => (
-          <li className="lists-item" key={item}>
-            {item}
+          <li className="lists-item" key={item.link}>
+            <Link to={item.link}>{item.title}</Link>
           </li>
         ))}
       </ul>

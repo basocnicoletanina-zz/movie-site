@@ -1,19 +1,7 @@
 .collection {
   color: white;
-
   justify-content: center;
   display: grid;
   grid-gap: 100px;
   grid-template-columns: 1fr 1fr;
-}
-.title {
-  padding: 20px;
-  font-size: 300%;
-}
-
-.welcome-image {
-  width: 1300px;
-  height: 500px;
-  padding: 50px;
-  transition: 0.3s;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import "./Collection.css";
 import Card from "../Card/Card";
 import { API_KEY } from "../Constants";
+import { tsImportEqualsDeclaration } from "@babel/types";
 
 class Collection extends React.Component {
   state = {
@@ -10,14 +11,21 @@ class Collection extends React.Component {
   };
 
   componentDidMount() {
-    fetch("https://api.themoviedb.org/3/discover/movie?api_key=" + API_KEY)
+    fetch(
+      "https://api.themoviedb.org/3/discover/movie?api_key=" +
+        API_KEY +
+        "&sort_by=" +
+        this.props.sorting
+    )
       .then(response => response.json())
       .then(response => {
         this.setState({
           movies: response.results.map(movie => {
             return {
               title: movie.original_title,
-              src: "https://image.tmdb.org/t/p/w500" + movie.poster_path,
+              src:
+                movie.poster_path &&
+                "https://image.tmdb.org/t/p/w500" + movie.poster_path,
               description: movie.overview,
               genres: movie.genre_ids,
             };
@@ -29,22 +37,14 @@ class Collection extends React.Component {
   render() {
     return (
       <div>
-        <img
-          src="./movie-theater-film-reel-background-in-seamless-loop_xk6ivnb9__F0000.png"
-          className="welcome-image"
-          alt=""
-        />
-        <h1 className="title-home">POPULAR MOVIES</h1>
         <div className="collection">
-          {this.state.movies.map((movie, index) => {
+          {this.state.movies.slice(0, this.props.cardCount).map(movie => {
             return (
               <Card
-                key={index}
-                src={movie.src}
                 title={movie.title}
-                genres={movie.genres}
                 description={movie.description}
-              />
+                genres={movie.genres}
+                src={movie.src}></Card>
             );
           })}
         </div>
