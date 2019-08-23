@@ -26,7 +26,7 @@ function Home() {
           cardCount={4}
           sorting="release_date.desc&include_adult=false&include_video=false&page=1"></Collection>
       </div>
-      <Link className="button-home-read-more" to="/popular">
+      <Link className="button-home-read-more" to="/new">
         VIEW ALL NEW
       </Link>
     </div>

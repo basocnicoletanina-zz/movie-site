@@ -7,13 +7,17 @@ function Header(props) {
   return (
     <header className="header">
       <div className="header-logo">
-        <img src={props.imageSource} alt="" className="logo" />
+        <Link to="/">
+          <img src={props.imageSource} alt="" className="logo" />
+        </Link>
       </div>
 
       <ul className="header-menu">
         {props.menu.map(item => (
           <li className="lists-item" key={item.link}>
-            <Link to={item.link}>{item.title}</Link>
+            <Link className="link-item" to={item.link}>
+              {item.title}
+            </Link>
           </li>
         ))}
       </ul>

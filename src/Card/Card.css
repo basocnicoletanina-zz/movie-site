@@ -75,3 +75,6 @@
 .genre-item:last-child::after {
   content: "";
 }
+.no-image {
+  width: 300px;
+}
