@@ -9,6 +9,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import Popular from "../Popular/Popular";
 import New from "../New/New";
+import Movie from "../Movie/Movie";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/about" exact component={About}></Route>
           <Route exact path="/new" component={New}></Route>
           <Route path="/popular" exact component={Popular}></Route>
+          <Route path="/movie/:id" exact component={Movie}></Route>
         </div>
         <Footer></Footer>
       </div>
