@@ -29,9 +29,8 @@ class Collection extends React.Component {
   render() {
     return (
       <div>
-        <h1>Status: {this.state.status}</h1>
         <img
-          src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/vfPFP3W/movie-theater-film-reel-background-in-seamless-loop_xk6ivnb9__F0000.png"
+          src="./movie-theater-film-reel-background-in-seamless-loop_xk6ivnb9__F0000.png"
           className="welcome-image"
           alt=""
         />
