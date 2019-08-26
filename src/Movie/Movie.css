@@ -1,0 +1,45 @@
+.image-movie {
+  width: 300px;
+  height: 400px;
+  float: left;
+  margin: 20px;
+  box-shadow: 0px 8px 16px 0px black;
+}
+​ .individual-card-movie {
+  background-color: #185d72;
+  padding: 20px;
+}
+.text-card-movie {
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  color: white;
+  display: flex;
+  height: 400px;
+
+  flex-direction: column;
+  background-color: #185d72;
+}
+.title-movie {
+  font-size: 45px;
+  padding: 20px;
+}
+.genre-movie {
+  font-size: 15px;
+  padding: 20px;
+}
+​ ​ .individual-actor {
+  box-shadow: 0px 8px 16px 0px black;
+  border: 2px solid black;
+}
+
+.description-movie {
+  font-size: 20px;
+  padding: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.image-and-text {
+  background-color: #185d72;
+}
