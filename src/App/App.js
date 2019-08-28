@@ -10,6 +10,7 @@ import About from "../About/About";
 import Popular from "../Popular/Popular";
 import New from "../New/New";
 import Movie from "../Movie/Movie";
+import Search from "../Search/Search";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/new" component={New}></Route>
           <Route path="/popular" exact component={Popular}></Route>
           <Route path="/movie/:id" exact component={Movie}></Route>
+          <Route path="/search" extact component={Search}></Route>
         </div>
         <Footer></Footer>
       </div>

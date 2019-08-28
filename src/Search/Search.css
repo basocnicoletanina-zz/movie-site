@@ -1,0 +1,11 @@
+.button-search {
+  padding: 20px;
+}
+.input-search {
+  font-size: 20px;
+  width: 300px;
+}
+.search {
+  display: flex;
+  justify-content: center;
+}
