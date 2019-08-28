@@ -1,7 +1,7 @@
 .card {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  background-color: rgb(42, 80, 95);
+  background-color: rgb(18, 6, 46);
   display: flex;
   min-width: 0;
   justify-content: space-between;
@@ -33,11 +33,12 @@
 .genre {
   position: relative;
   padding: 20px;
+  color: rgb(164, 241, 247);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  font-size: 150%;
+  font-size: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -72,7 +73,7 @@
   flex-direction: column;
 }
 .genre-item::after {
-  content: "";
+  content: "*";
   padding-left: 10px;
   padding-right: 10px;
 }
