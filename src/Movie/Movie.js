@@ -7,7 +7,7 @@ import Trailer from "../Trailer/Trailer";
 
 class Movie extends React.Component {
   state = {
-    movie: {},
+    movie: { title: "", description: "", src: "", id: "", genres: [] },
     cast: [],
   };
 
@@ -23,13 +23,12 @@ class Movie extends React.Component {
         .then(movie => {
           this.setState({
             movie: {
-              trailer: "",
               title: movie.original_title,
               description: movie.overview,
               src:
                 movie.poster_path &&
                 "https://image.tmdb.org/t/p/w500" + movie.poster_path,
-              genres: movie.genres.name,
+              genres: movie.genres,
               id: movie.id,
             },
           });
@@ -42,7 +41,6 @@ class Movie extends React.Component {
     )
       .then(response => response.json())
       .then(response => {
-        // console.log("cast", response);
         this.setState({
           cast: response.cast.map(actor => {
             return {
@@ -71,12 +69,29 @@ class Movie extends React.Component {
           )}
           <div className="text-card-movie">
             <p className="title-movie"> {this.state.movie.title}</p>
-            <p className="genre-movie">{this.state.movie.genres}</p>
-            <p className="description-movie">{this.state.movie.description} </p>
+
+            {this.state.movie.genres > 0 ? (
+              <ul className="list-genres">
+                {this.state.movie.genres.map(genre => (
+                  <li className="list-genre">{genre.name}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="no-genres">No genres available.</p>
+            )}
+
+            {this.state.movie.description ? (
+              <p className="description-movie">
+                {this.state.movie.description}
+              </p>
+            ) : (
+              <p className="plot-unknown">Plot Unknown.</p>
+            )}
+
+            <Trailer id={this.props.match.params.id}></Trailer>
+            <Actors cast={this.state.cast}></Actors>
           </div>
-          <Trailer id={this.props.match.params.id}></Trailer>
         </div>
-        <Actors cast={this.state.cast}></Actors>
       </div>
     );
   }

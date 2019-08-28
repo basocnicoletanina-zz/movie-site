@@ -13,7 +13,7 @@
 
 .title {
   padding: 20px;
-  font-size: 200%;
+  font-size: 40px;
 }
 .text {
   line-height: 1.2;
@@ -63,14 +63,16 @@
 }
 .text-card {
   text-align: center;
-  padding: 7px;
+  padding: 20px;
   display: flex;
   min-width: 0;
+  width: 350px;
+  height: 450px;
   justify-content: space-between;
   flex-direction: column;
 }
 .genre-item::after {
-  content: "|";
+  content: "";
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -79,4 +81,12 @@
 }
 .no-image {
   width: 300px;
+}
+.no-genres-card {
+  padding: 20px;
+  font-size: 20px;
+}
+.plot-unknown-card {
+  padding: 20px;
+  font-size: 20px;
 }

@@ -16,7 +16,6 @@ class Trailer extends React.Component {
       )
         .then(response => response.json())
         .then(movie => {
-          console.log("!!!", movie);
           this.setState({
             movie: {
               src: movie.results.length > 0 && movie.results[0].key,
@@ -27,17 +26,18 @@ class Trailer extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="trailer">
-          <p className="text-trailer">TRAILER</p>
+      <div className="trailer">
+        {this.state.movie.src ? (
           <iframe
-            width="560"
-            height="315"
+            width="1024"
+            height="576"
             src={`https://www.youtube.com/embed/${this.state.movie.src}`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen></iframe>
-        </div>
+        ) : (
+          <img src="https://cdn.windowsreport.com/wp-content/uploads/2018/02/windows-10-error-video-could-not-be-decoded-3.png" />
+        )}
       </div>
     );
   }

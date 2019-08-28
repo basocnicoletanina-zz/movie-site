@@ -1,7 +1,7 @@
 .trailer {
   display: flex;
   align-items: center;
-  flex-direction: columnn;
+  flex-direction: column;
   padding-bottom: 50px;
   font-size: 30px;
   color: white;

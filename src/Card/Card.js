@@ -14,15 +14,25 @@ function Card(props) {
         />
       )}
       <div className="text-card">
-        <h2 className="title">{props.title}</h2>
-        <ul className="genre">
-          {props.genres.map((genre, index) => (
-            <li key={index} className="genre-item">
-              {genre}
-            </li>
-          ))}
-        </ul>
-        <p className="text">{props.description}</p>
+        <p className="title">{props.title}</p>
+
+        {props.genres.length > 0 ? (
+          <ul className="genre">
+            {props.genres.map((genre, index) => (
+              <li key={index} className="genre-item">
+                {genre}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="no-genres-card">No genres available.</p>
+        )}
+
+        {props.description ? (
+          <p className="text">{props.description}</p>
+        ) : (
+          <p className="plot-unknown-card">Plot Unknown.</p>
+        )}
 
         <Link to={props.to} className="button">
           Read more
