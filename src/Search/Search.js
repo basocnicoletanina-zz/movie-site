@@ -31,7 +31,6 @@ class Search extends React.Component {
               "&language=en-US"
           ).then(response => response.json()),
         ]).then(response => {
-          console.log(response);
           const movieList = response[0].results;
           const genreList = response[1].genres;
           const newMovie = movieList.map(movie => ({
