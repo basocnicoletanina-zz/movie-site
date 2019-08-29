@@ -29,14 +29,17 @@ class Trailer extends React.Component {
       <div className="trailer">
         {this.state.movie.src ? (
           <iframe
-            width="1024"
+            width="900"
             height="576"
             src={`https://www.youtube.com/embed/${this.state.movie.src}`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen></iframe>
         ) : (
-          <img src="https://cdn.windowsreport.com/wp-content/uploads/2018/02/windows-10-error-video-could-not-be-decoded-3.png" />
+          <img
+            className="no-trailer"
+            src="https://cdn.windowsreport.com/wp-content/uploads/2018/02/windows-10-error-video-could-not-be-decoded-3.png"
+          />
         )}
       </div>
     );

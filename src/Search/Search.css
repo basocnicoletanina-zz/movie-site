@@ -1,12 +1,35 @@
 .button-search {
+  width: 200px;
+  font-size: 30px;
+  color: white;
+  margin-left: 20px;
   padding: 20px;
+  background-image: linear-gradient(
+    rgb(11, 8, 27),
+    rgb(82, 78, 94),
+    rgb(13, 10, 34)
+  );
+  border-radius: 10px;
 }
 .input-search {
-  font-size: 20px;
+  height: 60px;
+  font-size: 30px;
+  padding: 10px;
+  color: white;
   width: 300px;
-  height: 300px;
+  background-image: linear-gradient(
+    rgb(32, 28, 37),
+    rgb(64, 57, 90),
+    rgb(32, 28, 37)
+  );
+  border-radius: 10px;
 }
 .search {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+.input-and-button {
+  margin-bottom: 50px;
 }

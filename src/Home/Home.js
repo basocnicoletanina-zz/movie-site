@@ -29,6 +29,15 @@ function Home() {
       <Link className="button-home-read-more" to="/new">
         VIEW ALL NEW
       </Link>
+      <div className="home-section">
+        <h1 className="title-home">BEST RATED</h1>
+        <Collection
+          cardCount={4}
+          sorting="vote_average.asc&include_adult=false&include_video=false&page=1"></Collection>
+      </div>
+      <Link className="button-home-read-more" to="/best_voted">
+        VIEW ALL WITH BEST RATING
+      </Link>
     </div>
   );
 }
