@@ -1,8 +1,92 @@
 .card {
-  color: white;
-  border: 4px dotted black;
-  padding: 200px;
+  box-shadow: 0 8px 30px 0 rgb(0, 0, 0);
+  transition: 0.3s;
+  background-image: linear-gradient(rgb(13, 10, 34), rgb(127, 142, 170));
   display: flex;
+  min-width: 0;
+  justify-content: space-between;
+}
+
+.card:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  padding: 20px;
+  font-size: 40px;
+}
+.text {
+  line-height: 1.2;
+  max-height: 96px;
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.image {
+  width: 300px;
+}
+.genre {
+  position: relative;
+  padding: 20px;
+  color: rgb(164, 241, 247);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-  background-color: #555555;
+  font-size: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button {
+  padding: 15px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+  transition-duration: 0.1s;
+  border: 2px solid rgb(151, 160, 187);
+  box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  cursor: pointer;
+  background-color: rgb(225, 236, 238);
+  color: black;
+}
+.button:hover {
+  background-color: rgb(20, 12, 34); /* Green */
+  color: rgb(255, 255, 255);
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.text-card {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  min-width: 0;
+  width: 350px;
+  height: 450px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.genre-item::after {
+  content: "*";
+  padding: 0px 10px 0px 10px;
+}
+.genre-item:last-child::after {
+  content: "";
+}
+.no-image {
+  width: 300px;
+}
+.no-genres-card {
+  padding: 20px;
+  font-size: 20px;
+}
+.plot-unknown-card {
+  padding: 20px;
+  font-size: 20px;
 }

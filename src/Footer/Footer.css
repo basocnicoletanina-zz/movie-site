@@ -1,5 +1,5 @@
 .footer {
-  background-color: #555;
-  background-image: URL("http://wader.github.io/slippy/resources/svg/background.svg");
-  height: 50px;
+  background-color: rgb(9, 5, 19);
+  height: 100px;
+  margin-top: 40px;
 }
