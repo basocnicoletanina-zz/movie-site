@@ -60,11 +60,12 @@ class Movie extends React.Component {
       <div className="individual-card-movie">
         <div className="image-and-text">
           {this.state.movie.src ? (
-            <img src={this.state.movie.src} className="image-movie" />
+            <img src={this.state.movie.src} className="image-movie" alt="" />
           ) : (
             <img
               className="image-movie"
               src="https://s3-ap-southeast-1.amazonaws.com/silverscreen-photos/1534489151m000001.jpg"
+              alt=""
             />
           )}
           <div className="text-card-movie">

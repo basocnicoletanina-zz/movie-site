@@ -11,11 +11,12 @@ class Card extends React.Component {
     return (
       <div className="card">
         {this.props.src ? (
-          <img src={this.props.src} className="image" />
+          <img src={this.props.src} className="image" alt="" />
         ) : (
           <img
             className="no-image"
             src="https://s3-ap-southeast-1.amazonaws.com/silverscreen-photos/1534489151m000001.jpg"
+            alt=""
           />
         )}
         <div className="text-card">

@@ -18,14 +18,15 @@ function Actors(props) {
                     <img
                       className="no-image-actors"
                       src="https://dcassetcdn.com/common/images/v3/no-profile-pic-tiny.png"
+                      alt=""
                     />
                   )}
-                  <p key={index} className="actor-name">
+                  <h4 key={index} className="actor-name">
                     {actor.name}
-                  </p>
-                  <p key={index} className="actor-role">
+                  </h4>
+                  <h4 key={index} className="actor-role">
                     {actor.character}
-                  </p>
+                  </h4>
                 </div>
               );
             })}
