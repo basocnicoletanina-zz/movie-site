@@ -68,7 +68,7 @@ class Movie extends React.Component {
             />
           )}
           <div className="text-card-movie">
-            <p className="title-movie"> {this.state.movie.title}</p>
+            <h1 className="title-movie"> {this.state.movie.title}</h1>
 
             {this.state.movie.genres > 0 ? (
               <ul className="list-genres">

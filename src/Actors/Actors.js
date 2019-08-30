@@ -5,7 +5,7 @@ import { API_KEY } from "../Constants";
 function Actors(props) {
   return (
     <div className="actors-category">
-      ​<p className="introduction-actors">CAST</p>​
+      ​<h1 className="introduction-actors">CAST</h1>​
       {props.cast.length > 0 ? (
         <div className="actors-movie">
           {props.cast &&

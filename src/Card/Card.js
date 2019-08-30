@@ -19,7 +19,7 @@ class Card extends React.Component {
           />
         )}
         <div className="text-card">
-          <p className="title">{this.props.title}</p>
+          <h1 className="title">{this.props.title}</h1>
 
           {this.props.genres.length > 0 ? (
             <ul className="genre">
