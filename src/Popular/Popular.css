@@ -1,0 +1,15 @@
+.title-home-popular {
+  font-size: 80px;
+  text-align: center;
+  color: white;
+  margin: 20px 0px 40px;
+  background-image: linear-gradient(
+    rgb(13, 10, 34),
+    rgb(30, 26, 44),
+    rgb(13, 10, 34)
+  );
+  border: 3px solid white;
+  padding: 20px;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}

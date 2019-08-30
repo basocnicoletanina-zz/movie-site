@@ -1,0 +1,17 @@
+.trailer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+  font-size: 30px;
+  color: white;
+}
+.text-trailer {
+  padding: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.no-trailer {
+  width: 900px;
+  height: 576px;
+}

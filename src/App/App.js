@@ -7,18 +7,33 @@ import Footer from "../Footer/Footer";
 
 import Home from "../Home/Home";
 import About from "../About/About";
+import Popular from "../Popular/Popular";
+import New from "../New/New";
+import Movie from "../Movie/Movie";
+import Search from "../Search/Search";
+import Vote from "../Vote/Vote";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Header
-          imageSource="https://image.flaticon.com/icons/png/128/69/69480.png"
+          imageSource="https://www.logospng.com/images/117/console-playlist-genre-intro-videos-playlists-amp-playlist-117795.png"
           anotherProps="Ma"
-          menu={["Popular ", "New", "Search"]}></Header>
+          menu={[
+            { link: "/popular", title: "Popular" },
+            { link: "/new", title: "New" },
+            { link: "/best_voted", title: "Best Rated" },
+            { link: "/search", title: "Search" },
+          ]}></Header>
         <div className="app-content">
           <Route exact path="/" component={Home}></Route>
           <Route path="/about" exact component={About}></Route>
+          <Route exact path="/new" component={New}></Route>
+          <Route path="/popular" exact component={Popular}></Route>
+          <Route path="/movie/:id" exact component={Movie}></Route>
+          <Route path="/search" extact component={Search}></Route>
+          <Route path="/best_voted" extact component={Vote}></Route>
         </div>
         <Footer></Footer>
       </div>

@@ -1,0 +1,7 @@
+.collection {
+  color: white;
+  justify-content: center;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr;
+}
